@@ -1,0 +1,206 @@
+ :root {
+    --pink-100: #fdecef; /* Rosa bem suave e delicado */
+    --pink-500: #e4a9b2; /* Rosa médio com um tom elegante */
+    --pink-600: #d18c96; /* Rosa mais profundo e sofisticado */
+    --purple-100: #f6f0fa; /* Lavanda bem clarinho */
+    --purple-600: #bca0c9; /* Roxo médio e suave */
+    --purple-700: #9f86b5; /* Roxo mais fechado e aconchegante */
+    --gray-600: #b3adb8; /* Cinza levemente arroxeado e neutro */
+    --gray-700: #968f9e; /* Cinza mais escuro, mantendo o tom romântico */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--pink-100), var(--purple-100));
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.heart {
+    font-size: 2rem;
+    animation: pulse 1.5s infinite;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--pink-600);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-700);
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.image-container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+}
+
+img {
+    width: 99%;
+    border-radius: 10px;
+    height: 550px;
+    object-fit: cover ;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.star {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--purple-700);
+}
+
+.message {
+    font-size: 1.125rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: var(--purple-600);
+}
+
+.card p {
+    color: var(--gray-600);
+}
+
+.final-message {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.final-message p {
+    display: inline-block;
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--pink-600);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .content {
+        text-align: left;
+    }
+
+    .title {
+        justify-content: flex-start;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
